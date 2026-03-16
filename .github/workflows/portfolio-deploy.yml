@@ -34,7 +34,7 @@ jobs:
       - name: Upload static files
         uses: actions/upload-pages-artifact@v4
         with:
-          path: "./frontend" #Path to your static code artifacts, in this case the root directory of the repository
+          path: "./frontend/build" #Path to your static code artifacts, in this case the root directory of the repository
 
       #Step = 4
       #Deploy to Github pages

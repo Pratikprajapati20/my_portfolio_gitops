@@ -1,19 +1,19 @@
 name: Hello
-'on':
+"on":
   push:
-    branches: [main]
+    # branches: [main]
+    # paths:
+    #   - "**.html"
+  workflow_dispatch:
 
-    paths:
-      - "**.html"
-  
 jobs:
   greet:
-     #This is github runner
+    #This is github runner
     runs-on: ubuntu-latest
     steps:
       - name: sayhello to users
         run: echo "Hello dosto"
-      
+
       - name: say hello to username
         run: echo "This workflow was triggered by ${{ github.actor }}"
 
