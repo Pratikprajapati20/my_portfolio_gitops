@@ -1,0 +1,24 @@
+name: Hello
+'on':
+  push:
+    branches: [main]
+
+    paths:
+      - "**.html"
+  
+jobs:
+  greet:
+     #This is github runner
+    runs-on: ubuntu-latest
+    steps:
+      - name: sayhello to users
+        run: echo "Hello dosto"
+      
+      - name: say hello to username
+        run: echo "This workflow was triggered by ${{ github.actor }}"
+
+  details:
+    runs-on: ubuntu-latest
+    steps:
+      - name: show all versions
+        run: echo "python --version, docker --version"
