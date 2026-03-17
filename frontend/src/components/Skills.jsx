@@ -1,8 +1,9 @@
 import React from 'react'
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 import {
     FaJenkins, FaGithub, FaDocker, FaAws,
-    FaTerminal, FaCode, FaLock,
+    FaTerminal,
+    // FaTerminal, FaCode, FaLock,
     FaPhp,
     FaPython
 } from 'react-icons/fa';
@@ -52,16 +53,16 @@ const Skills = () => {
 
     ]
 
-    const cardBorder = styled(Card)`
-    .my-custom-card {
-      border: 1px solid transparent; /* Initial border, can be transparent or a subtle color */
-      transition: border-color 0.3s ease-in-out; /* Smooth transition for the border color */
-    }
+    // const cardBorder = styled(Card)`
+    // .my-custom-card {
+    //   border: 1px solid transparent; /* Initial border, can be transparent or a subtle color */
+    //   transition: border-color 0.3s ease-in-out; /* Smooth transition for the border color */
+    // }
 
-    .my-custom-card:hover {
-      border-color: #007bff; /* Desired border color on hover */
-    }
-      `;
+    // .my-custom-card:hover {
+    //   border-color: #007bff; /* Desired border color on hover */
+    // }
+    //   `;
 
     return (
         <Container className="section">
