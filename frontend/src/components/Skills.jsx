@@ -10,7 +10,7 @@ import {
 import { SiKubernetes, SiTerraform, SiAnsible, SiPrometheus, SiGrafana, SiArgo } from 'react-icons/si';
 
 import Marquee from 'react-fast-marquee';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 const Skills = () => {
     React.useEffect(() => {
         const cards = document.querySelectorAll('.spotlight-card');
