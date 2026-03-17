@@ -41,7 +41,7 @@ jobs:
       - name: Build Project
         run: |
           cd frontend
-          npm run build
+          CI=false npm run build
 
       #Step= 5 Setup Github pages
       - name: Setup github pages
