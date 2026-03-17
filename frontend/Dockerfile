@@ -10,7 +10,7 @@ RUN npm install
 COPY . ./
 
 # Set homepage to root for Docker deployment
-RUN sed -i 's|"homepage": "https://apurvagargote.github.io/devops-portfolio"|"homepage": "/"|g' package.json
+RUN sed -i 's|"homepage": "https://pratikprajapati20.github.io/my_portfolio_gitops/"|"homepage": "/"|g' package.json
 
 # Build the application
 RUN npm run build
