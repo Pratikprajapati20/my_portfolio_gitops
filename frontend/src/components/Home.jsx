@@ -146,6 +146,7 @@ const Home = () => {
                 </span><br />
 
                 <PurpleSpan className="hero-name">Pratik 👋</PurpleSpan>
+
               </h1>
               <div className="lead mb-5 typing-animation">
                 <p>

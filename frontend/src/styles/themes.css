@@ -19,9 +19,29 @@
   --card-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   --navbar-bg: #f8f9fa;
   --navbar-text: #212529;
-  --hero-bg: linear-gradient(135deg, #FFD1DC, #FFDAB9, #D8BFD8);
+  /* --hero-bg: linear-gradient(135deg, #FFD1DC, #FFDAB9, #D8BFD8); */
+  --hero-bg: linear-gradient(90deg, #b4f2b6, #84dea5, #D8BFD8);
   --hero-text: #212529;
   --transition-speed: 0.3s;
+  --webkit-background-clip: text;
+  --webkit-text-fill-color: transparent;
+}
+
+/* Pratik Addition */
+.hero h1 {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 [data-theme='dark'] {
@@ -39,14 +59,23 @@
   --hero-text: #e0e0e0;
 }
 
-body, main, .App {
+body,
+main,
+.App {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   transition: background-color var(--transition-speed), color var(--transition-speed);
   min-height: 100vh;
 }
 
-p, h1, h2, h3, h4, h5, h6, .section-title {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.section-title {
   color: var(--text-primary);
   margin-top: 50px;
 }
@@ -155,9 +184,9 @@ a,
 
 /* Typography overrides for dark theme */
 [data-theme='dark'] p,
-[data-theme='dark'] h1, 
-[data-theme='dark'] h2, 
-[data-theme='dark'] h3, 
+[data-theme='dark'] h1,
+[data-theme='dark'] h2,
+[data-theme='dark'] h3,
 [data-theme='dark'] h4,
 [data-theme='dark'] h5,
 [data-theme='dark'] h6,
@@ -282,13 +311,17 @@ a,
 
 [data-theme='dark'] .btn-primary.cta-button.glow-button:hover,
 [data-theme='dark'] .btn-primary.cta-button.glow-button:focus {
-  background-color: rgba(201, 160, 220, 0.25) !important; /* translucent pale mauve */
-  border-color: #ffffff !important;  /* white border */
-  box-shadow: 0 0 5px #ffffff !important; /* white glow */
+  background-color: rgba(201, 160, 220, 0.25) !important;
+  /* translucent pale mauve */
+  border-color: #ffffff !important;
+  /* white border */
+  box-shadow: 0 0 5px #ffffff !important;
+  /* white glow */
   color: #ffffff !important;
   outline: none !important;
   opacity: 1 !important;
 }
+
 /* General button styling - Purple background initially */
 .btn-outline-light,
 .btn-outline-dark,
@@ -370,11 +403,13 @@ a,
   color: #C9A0DC !important;
   border-color: #C9A0DC !important;
 }
+
 /* Make GitHub text white in dark theme */
 [data-theme='dark'] .project-card .btn {
   color: #000000 !important;
   background-color: white !important;
 }
+
 /* Fix download resume button text color in dark theme */
 [data-theme='dark'] .resume-download-btn {
   color: #ffffff !important;
@@ -383,6 +418,7 @@ a,
 [data-theme='dark'] .resume-download-btn:hover {
   color: #C9A0DC !important;
 }
+
 /* Fix footer text visibility in light theme */
 footer.bg-dark p {
   color: #ffffff !important;
@@ -395,6 +431,7 @@ footer.bg-dark a {
 footer.bg-dark a:hover {
   color: #C9A0DC !important;
 }
+
 /* Fix download button after click */
 .resume-download-btn,
 .resume-download-btn:visited,
