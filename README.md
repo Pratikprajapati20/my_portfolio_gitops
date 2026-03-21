@@ -6,7 +6,7 @@ A modern, responsive portfolio website showcasing DevOps skills and projects, bu
 
 ## 🌐 Live Demo
 
-**[View Portfolio](https://pratikprajapati.github.io/portfolio/)**
+**[View Portfolio](https://pratikprajapati20.github.io/my_portfolio_gitops/)**
 
 ## ✨ Features
 
