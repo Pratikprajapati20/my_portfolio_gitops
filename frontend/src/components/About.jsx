@@ -14,20 +14,32 @@ const About = () => {
           <Card className="border-0 shadow-sm">
             <Card.Body className="p-5" style={{ textAlign: 'justify' }}>
               <p className="lead">
-                Hello, I’m Pratik Prajapati, an aspiring DevOps Engineer passionate about automation, cloud computing, and designing scalable infrastructure.
+                {/* Hello, I’m Pratik Prajapati, an aspiring DevOps Engineer passionate about automation, cloud computing, and designing scalable infrastructure. */}
+                Hello, I’m Pratik Prajapati — an aspiring DevOps Engineer with a strong passion for automation, cloud computing, and building scalable, reliable infrastructure.
               </p>
 
               <h4 className="mt-4">Learning Journey</h4>
               <p>
-                I’m actively developing my skills through hands-on projects and structured learning programs. As part of the #90DaysOfDevOps challenge with TrainWithShubham, I’m gaining practical experience with essential DevOps tools and methodologies.
+                I am actively developing my DevOps expertise through hands-on projects and structured learning. As part of the #90DaysOfDevOps challenge with TrainWithShubham, I am gaining practical experience with industry-standard tools and real-world workflows.
+
+                My focus is on designing and implementing CI/CD pipelines, automating infrastructure using Infrastructure as Code (IaC), and working with cloud platforms to streamline development and operations.
               </p>
               <p>
                 My focus is on designing efficient CI/CD pipelines, automating infrastructure, and utilizing cloud platforms to seamlessly integrate development and operations, while also implementing robust monitoring and alerting systems for application performance.
               </p>
 
+              <h4 className='mt-4'>What I’m Building</h4>
+              <p>
+                - End-to-end CI/CD pipelines for automated build and deployment<br></br>
+                - Containerized applications using Docker and Kubernetes<br></br>
+                - Cloud-based infrastructure solutions using AWS<br></br>
+                - Monitoring and alerting systems to ensure performance and reliability
+                and more...
+              </p>
+
               <h4 className="mt-4">DevOps Mindset</h4>
               <p>
-                I believe DevOps revolves around continuous improvement, automation, and collaboration. I dedicate myself to applying my knowledge through real projects, optimizing workflows, and staying updated on emerging technologies.
+                I believe DevOps is not just about tools, but about a culture of continuous improvement, collaboration, and automation. I enjoy solving complex problems, optimizing workflows, and continuously learning new technologies to build efficient and scalable systems.
               </p>
 
               <h4 className="mt-4">Knowledge Sharing</h4>
@@ -35,23 +47,19 @@ const About = () => {
                 I document my learning journey and insights on <a href="https://pratikprajapati.hashnode.dev/" target="_blank" rel="noopener noreferrer"><u>Hashnode</u></a>, sharing practical solutions and challenges encountered in the DevOps space.
               </p>
 
-              {/* <h4 className="mt-4">Interests</h4>
-              <p>
-                Beyond work, I enjoy exploring emerging technologies, engaging with tech communities, and staying abreast of trends in cloud-native development, system design, and infrastructure automation.
-              </p> */}
-
               <h4 className="mt-4">Let’s Connect</h4>
+
+              <p>I’m open to collaboration, mentorship, and opportunities in DevOps and Cloud Engineering.</p>
               <p>
-                Feel free to reach out via email at <a href="mailto:prajapatipratik20@gmail.com">prajapatipratik20@gmail.com</a>. I’m open to collaboration, mentorship, and opportunities in DevOps and cloud engineering.
+                📧 Email: prajapatipratik20@gmail.com<br></br>
+                🔗 LinkedIn: https://www.linkedin.com/in/pratik2009/<br></br>
+                💻 GitHub: https://github.com/Pratikprajapati20<br></br>
               </p>
             </Card.Body>
-
-
-
           </Card>
         </Col>
       </Row>
-    </Container>
+    </Container >
   );
 };
 

@@ -68,7 +68,7 @@ const Skills = () => {
         <Container className="section">
             <Row>
                 <Col lg={8} className="mx-auto text-center">
-                    <h2 className="section-title">Skills & Tools</h2>
+                    <h2 className="section-title">Tech Stack</h2>
                     <p className="lead mb-5">
                         My technical expertise across the DevOps ecosystem
                     </p>

@@ -20,7 +20,22 @@ const NavbarBrandWrapper = styled.div`
   @media (max-width: 576px) {
     max-width: 50%;
   }
+
+  .brand-logo {
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: #e2e8f0;
+    }
+    .role-text {
+      display: block;          /* moves to next line */
+      font-size: 0.60rem;      /* smaller text */
+      // text-transform: lowercase;
+      color: #00BFFF;          /* subtle gray */
+      letter-spacing: 0.5px;     /* modern spacing */
+      margin-top: 0px;
+    }
 `;
+
 
 const CustomToggle = styled(Navbar.Toggle)`
   border-color: var(--accent-color) !important;
@@ -42,11 +57,11 @@ const Header = () => {
         e.preventDefault();
         const targetId = href.substring(1);
         const targetElement = document.getElementById(targetId);
-        
+
         if (targetElement) {
           const navbarHeight = document.querySelector('.navbar').offsetHeight;
           const targetPosition = targetElement.offsetTop - navbarHeight - 20;
-          
+
           window.scrollTo({
             top: targetPosition,
             behavior: 'smooth'
@@ -55,31 +70,31 @@ const Header = () => {
       }
       // Don't close navbar immediately, let the outside click handler do it
     };
-    
+
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
       link.addEventListener('click', handleNavClick);
     });
-    
+
     return () => {
       navLinks.forEach(link => {
         link.removeEventListener('click', handleNavClick);
       });
     };
   }, []);
-  
+
   // Add active class to nav links based on scroll position
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll('section[id]');
       const scrollPosition = window.pageYOffset + 100; // Offset for better detection
-      
+
       sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
         const sectionId = section.getAttribute('id');
         const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-        
+
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
           navLink?.classList.add('active');
         } else {
@@ -87,15 +102,15 @@ const Header = () => {
         }
       });
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Initial check
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-  
+
   useEffect(() => {
     const handleScroll = () => {
       const navbar = document.querySelector('.navbar');
@@ -107,29 +122,29 @@ const Header = () => {
         }
       }
     };
-    
+
     const handleClickOutside = (event) => {
       if (navbarRef.current && !navbarRef.current.contains(event.target) && expanded) {
         setExpanded(false);
       }
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     document.addEventListener('mousedown', handleClickOutside);
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [expanded]);
-  
+
   return (
-    <Navbar 
+    <Navbar
       as="nav"
-      bg={isDarkMode ? "dark" : "light"} 
-      variant={isDarkMode ? "dark" : "light"} 
-      expand="lg" 
-      sticky="top" 
+      bg={isDarkMode ? "dark" : "light"}
+      variant={isDarkMode ? "dark" : "light"}
+      expand="lg"
+      sticky="top"
       className="navbar-dark"
       expanded={expanded}
       ref={navbarRef}
@@ -138,14 +153,14 @@ const Header = () => {
     >
       <Container className="d-flex justify-content-between">
         <NavbarBrandWrapper>
-          <Navbar.Brand href="#home" className="gradient-text">DevOps Portfolio</Navbar.Brand>
+          <Navbar.Brand href="#home" className="gradient-text brand-logo">Pratik Prajapati <span className="role-text">Software Engineer </span></Navbar.Brand>
         </NavbarBrandWrapper>
         <div className="d-flex align-items-center">
           <ThemeToggleWrapper className="d-flex d-lg-none me-2">
             <ThemeToggle />
           </ThemeToggleWrapper>
-          <CustomToggle 
-            aria-controls="basic-navbar-nav" 
+          <CustomToggle
+            aria-controls="basic-navbar-nav"
             onClick={() => setExpanded(!expanded)}
             aria-label="Toggle navigation"
           />
@@ -157,6 +172,7 @@ const Header = () => {
             <Nav.Item as="li"><Nav.Link href="#skills">Skills</Nav.Link></Nav.Item>
             <Nav.Item as="li"><Nav.Link href="#projects">Projects</Nav.Link></Nav.Item>
             <Nav.Item as="li"><Nav.Link href="#resume">Resume</Nav.Link></Nav.Item>
+            <Nav.Item as="li"><Nav.Link href="#blog">Blog</Nav.Link></Nav.Item>
             <Nav.Item as="li"><Nav.Link href="#contact">Contact</Nav.Link></Nav.Item>
             <Nav.Item as="li">
               <ThemeToggleWrapper className="d-none d-lg-flex">
@@ -166,7 +182,7 @@ const Header = () => {
           </Nav>
         </Navbar.Collapse>
       </Container>
-    </Navbar>
+    </Navbar >
   );
 };
 

@@ -21,25 +21,6 @@ const HeroSection = styled.div`
   }
 `;
 
-// const ProfileImage = styled(Image)`
-//   width: 300px;
-//   height: 300px;
-//   object-fit: cover;
-//   border-radius: 20%;
-//   border: 4px solid var(--accent-color);
-//   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-//   transition: transform 0.5s ease, box-shadow 0.5s ease;
-
-//   &:hover {
-//     transform: scale(1.05);
-//     box-shadow: 0 0 30px var(--accent-color);
-//   }
-
-//   @media (max-width: 575px) {
-//     width: 150px;
-//     height: 150px;
-//   }
-// `;
 
 const PolaroidFrame = styled.div`
   position: relative;
@@ -155,10 +136,11 @@ const Home = () => {
                 <p>Let's build something awesome together! 🚀</p>
               </div>
               <div>
-                <Button href="#contact" variant="primary" size="lg" className="cta-button glow-button me-3">
+                <Button href="#contact" variant={isDarkMode ? "outline-light" : "outline-dark"} size="md" className="me-3 btn-primary">
                   Contact Me
                 </Button>
-                <Button href="#resume" variant={isDarkMode ? "outline-light" : "outline-dark"} size="lg" className="cta-button">
+
+                <Button href="#resume" variant={isDarkMode ? "outline-light" : "outline-dark"} size="md" className='btn-primary'>
                   View Resume
                 </Button>
               </div>

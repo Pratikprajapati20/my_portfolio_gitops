@@ -168,25 +168,25 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Cloud-Native Resource Monitoring App",
-      description: "Built a real-time system metrics dashboard using Flask and psutil.",
+      title: "End-to-End DevSecOps Pipeline",
+      description: "a complete DevSecOps pipeline for a Python Flask application — covering everything from code quality checks to secure deployment on AWS EC2.",
       tags: ["Kubernetes", "Flask", "Python", "Containerd"],
-      github: "https://github.com/apurvagargote/Cloud-native-monitoring-app",
-      outcomes: "Deployed on Kubernetes (KIND) using Containerd; improved setup efficiency by 40% and optimized system responsiveness to 300ms under 100+ concurrent test requests."
+      github: "https://github.com/Pratikprajapati20/devsecops-practice",
+      outcomes: "Building an automated CI/CD pipeline with integrated security scanning, containerization, and deployment workflows, ensuring secure, efficient, and production-ready application delivery"
     },
     {
-      title: "Node.js ToDo App with CI/CD Pipeline",
+      title: "React.js App with Jenkins CI/CD Pipeline",
       description: "Designed and automated a full CI/CD pipeline using Jenkins and GitHub Webhooks.",
-      tags: ["Node.js", "Jenkins", "Docker", "AWS EC2", "GitHub Webhooks"],
-      github: "https://github.com/apurvagargote/Node-todo-cicd",
-      outcomes: "Reduced deployment time by 53% (15min → 7min); maintained 95% build success rate and enabled zero-downtime releases using Docker and Nginx reverse proxy on AWS EC2."
+      tags: ["React.js", "Jenkins", "Docker", "AWS EC2", "GitHub Webhooks"],
+      github: "https://github.com/Pratikprajapati20/Reactjs-jenkins-pipline",
+      outcomes: "Reduced deployment time by 60%; maintained 95% build success rate and enabled zero-downtime releases using docker build and deploye on AWS EC2 server."
     },
     {
       title: "Two-Tier Flask Web App on Kubernetes",
       description: "Deployed a Flask–MySQL app on Kubernetes with persistent volumes and service discovery.",
       tags: ["Flask", "MySQL", "Kubernetes", "Containerd", "AWS"],
-      github: "https://github.com/apurvagargote/two-tier-flask-app",
-      outcomes: "Configured 3 services, 2 PVCs, and horizontal pod autoscaling for scalability and ensured 99.9% uptime through resilient deployment and AWS-based network security."
+      github: "https://github.com/Pratikprajapati20/two-tier-flask-app",
+      outcomes: "Set up 3 services, 2 persistent volume claims, and horizontal pod autoscaling to ensure scalability, while maintaining 99.9% uptime through a resilient deployment architecture and AWS network security measures."
     },
     {
       title: "Next.js web app running using docker",
@@ -194,6 +194,13 @@ const Projects = () => {
       tags: ["Next.js", "Docker", "Github", "Containerd"],
       github: "https://github.com/Pratikprajapati20/community_portfolio/tree/feature/docker",
       outcomes: "User can run this app seamlessly by simply executing the Docker build and run commands."
+    },
+    {
+      title: "Deploye E-Commerce App on EC2",
+      description: "This is an Ecommerce app.",
+      tags: ["Node.js", "Docker Compose", "Github", "Containerd", "Mysql"],
+      github: "https://github.com/Pratikprajapati20/online_shop",
+      outcomes: "Successfully deployed on AWS EC2, making the application production- ready and accessible to real users. Improved deployment efficiency by 50 % and reduced Docker image size by 1GB through optimized multi-stage builds and persist data using volume."
     }
 
   ];
@@ -202,7 +209,7 @@ const Projects = () => {
     <Container className="section">
       <Row>
         <Col lg={8} className="mx-auto text-center">
-          <h2 className="section-title">DevOps Projects</h2>
+          <h2 className="section-title">Projects</h2>
           <p className="lead mb-5">
             Key projects demonstrating DevOps practices and cloud architecture
           </p>
@@ -277,6 +284,7 @@ const Projects = () => {
                             >
                               <FaGithub className="me-2" /> View Code
                             </Button>
+
                           </div>
                         </Card.Body>
                       </ProjectCard>

@@ -22,17 +22,26 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     setIsSubmitting(true);
+    const formData = new FormData(event.target);
+    formData.append("access_key", "41e1aeac-486d-4ad3-92fe-3edb0a06e9aa");
 
-    // Always show success message
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
     setAlertVariant('success');
     setAlertMessage('Message Sent!');
-    setFormData({ name: '', email: '', message: '' });
+    setFormData(data.success ? "Success!" : "Error");
+
     setIsSubmitting(false);
     setShowAlert(true);
     setTimeout(() => setShowAlert(false), 3000);
+
   };
 
   return (
