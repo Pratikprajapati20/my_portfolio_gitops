@@ -153,7 +153,7 @@ const Header = () => {
     >
       <Container className="d-flex justify-content-between">
         <NavbarBrandWrapper>
-          <Navbar.Brand href="#home" className="gradient-text brand-logo">Pratik Prajapati <span className="role-text">Software Engineer </span></Navbar.Brand>
+          <Navbar.Brand href="#home" className="gradient-text brand-logo">Pratik Prajapati <span className="role-text">Devops Engineer </span></Navbar.Brand>
         </NavbarBrandWrapper>
         <div className="d-flex align-items-center">
           <ThemeToggleWrapper className="d-flex d-lg-none me-2">
