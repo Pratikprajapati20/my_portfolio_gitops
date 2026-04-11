@@ -62,7 +62,6 @@ const Contact = () => {
                     </a>
                   </p>
                 </div>
-
               </div>
 
               <div className="d-flex align-items-center mb-4">
